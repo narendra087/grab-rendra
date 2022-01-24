@@ -10,6 +10,10 @@ body {
   margin: 0;
 }
 
+p, label, span {
+  margin: 0;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -17,4 +21,8 @@ body {
   &__content {
     padding: 0 40px;
   }
+}
+
+.mobile__elm {
+  display: none;
 }
