@@ -3,6 +3,7 @@
     <Header />
     <Merchant />
     <ListFood />
+    <Footer />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Header from '@/components/Header.vue'
 import Merchant from '@/components/Merchant.vue'
 import ListFood from '@/components/ListFood.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'Home',
@@ -17,6 +19,7 @@ export default {
     Header,
     Merchant,
     ListFood,
+    Footer,
   }
 }
 </script>
