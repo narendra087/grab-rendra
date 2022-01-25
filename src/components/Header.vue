@@ -1,21 +1,23 @@
 <template>
-  <div class="container">
-    <div class="container__content">
-      <div class="header">
-        <div class="header__section header__section__left">
-          <div class="header__img">
-            <img src="@/assets/images/logo-grabfood2.svg" alt="logo">
+  <div class="header__sticky">
+    <div class="container">
+      <div class="container__content">
+        <div class="header">
+          <div class="header__section header__section__left">
+            <div class="header__img">
+              <img src="@/assets/images/logo-grabfood2.svg" alt="logo">
+            </div>
+            <div class="header__search">
+              <div class="header__search__button">Type your location</div>
+            </div>
           </div>
-          <div class="header__search">
-            <div class="header__search__button">Type your location</div>
-          </div>
-        </div>
-        <div class="header__section header__section__right">
-          <div class="header__cart">
-            <img src="@/assets/images/cart.png" alt="cart">
-          </div>
-          <div class="header__user">
-            Login/Sign Up
+          <div class="header__section header__section__right">
+            <div class="header__cart">
+              <img src="@/assets/images/cart.png" alt="cart">
+            </div>
+            <div class="header__user">
+              Login/Sign Up
+            </div>
           </div>
         </div>
       </div>
@@ -38,8 +40,12 @@ export default {
     align-items: center;
     justify-content: space-between;
     background: #FFF;
-    position: sticky;
-    top: 0;
+    &__sticky {
+      position: sticky;
+      top: 0;
+      background: #FFF;
+      z-index: 99;
+    }
     &__section {
       display: flex;
       align-items: center;

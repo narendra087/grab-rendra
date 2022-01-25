@@ -26,7 +26,7 @@ export default {
       width: 100%;
       padding: 15px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: auto 1fr;
       background-color: #fff;
       border-radius: 5px;
       position: relative;
@@ -39,8 +39,8 @@ export default {
       .fc {
         &__image {
           img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
           }
         }
         &__name {
