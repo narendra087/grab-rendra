@@ -72,7 +72,7 @@
       font-size: 14px;
       text-align: center;
       background: #f7f7f7;
-      padding-bottom: 25px;
+      padding: 0 25px 25px;
     }
     &__top {
       text-align: left;
