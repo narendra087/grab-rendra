@@ -46,6 +46,9 @@ export default {
       background: #FFF;
       height: 100%;
       padding: 20px;
+      @media screen and (min-width: 320px) and (max-width: 991px) {
+        width: 60%;
+      }
     }
     &__close {
       position: absolute;

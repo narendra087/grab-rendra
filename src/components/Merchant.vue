@@ -2,7 +2,9 @@
   <div class="container">
     <div class="container__content">
       <div class="merchant">
-        <div class="merchant__image mobile__elm"></div>
+        <div class="merchant__image mobile__elm">
+          <img src="@/assets/images/banner.png" alt="">
+        </div>
         <div class="merchant__navigation">
           <div v-for="(nav, index) in navigation" :key="index" class="navigation__item">
             {{nav}} <img src="@/assets/images/icon-next.svg" alt="next-icon">
@@ -30,8 +32,7 @@
           </div>
           <div class="merchant__info__promotion">
             <img src="@/assets/images/icon-promo-tag.svg" alt="" class="info__promotion__icon">
-            <p class="info__promotion__list">DUKUNGUMKM 60% | HEMAT40 40% | HEMAT35 35%</p>
-            <p class="info__promotion__details">See details</p>
+            <p class="info__promotion__list">DUKUNGUMKM 60% | HEMAT40 40% | HEMAT35 35%<span>See details</span></p>
           </div>
           <div class="merchant__info__additional">
             <img src="@/assets/images/icon-info.svg" alt="" class="info__additional__icon">
@@ -63,12 +64,15 @@ export default {
   .merchant {
     padding: 30px 0;
     text-align: left;
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      padding: 0;
+    }
     &__navigation {
-      display: flex;
+      display: inline-block;
       align-items: center;
       color: #00a5cf;
       .navigation__item {
-        display: flex;
+        display: inline-block;
         align-items: center;
         cursor: pointer;
         &--current {
@@ -78,6 +82,19 @@ export default {
       }
       img {
         margin: 0 15px;
+        @media screen and (min-width: 320px) and (max-width: 991px) {
+          margin: 0 5px;
+        }
+      }
+    }
+
+    &__image {
+      margin: 0 -15px;
+      margin-bottom: 20px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
 
@@ -94,6 +111,9 @@ export default {
       &__name {
         font-size: 36px;
         font-weight: 700;
+        @media screen and (min-width: 320px) and (max-width: 768px) {
+          font-size: 24px;
+        }
       }
       &__category {
         margin: 5px 0 15px;
@@ -134,13 +154,19 @@ export default {
         align-items: center;
         gap: 15px;
         font-size: 14px;
+        margin-bottom: 10px;
         img {
           width: 24px;
           height: 24px;
         }
-        .info__promotion__details {
-          color: #00a5cf;
-          font-weight: 700;
+        p {
+          display: inline-block;
+          span {
+            display: inline-block;
+            color: #00a5cf;
+            font-weight: 700;
+            margin-left: 15px;
+          }
         }
       }
       &__additional {
@@ -160,15 +186,29 @@ export default {
       align-items: center;
       gap: 15px;
       margin: 10px 0 20px;
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        display: grid;
+      }
       &__item {
         display: flex;
         align-items: center;
         height: 46px;
-        min-width: 350px;
+        width: 50%;
+        max-width: 350px;
         border-radius: 8px;
-        border: 1px solid #c5c5c5;
+        border: 1px solid #f0efef;
         padding: 0 10px;
         cursor: pointer;
+        @media screen and (min-width: 320px) and (max-width: 991px) {
+          max-width: 225px;
+        }
+        @media screen and (min-width: 320px) and (max-width: 768px) {
+          max-width: unset;
+          width: 100%;
+        }
+        &:hover {
+          border-color: #1ebd60;
+        }
         img {
           margin-right: 10px;
         }

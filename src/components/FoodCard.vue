@@ -32,15 +32,25 @@ export default {
       position: relative;
       cursor: pointer;
       gap: 15px;
+      @media screen and (min-width: 320px) and (max-width: 991px) {
+        border-bottom: 1px solid #EBEBEB;
+        padding: 0 0 20px;
+      }
       &:hover {
         border: 1px solid #10b65b;
         padding: 14px;
+        @media screen and (min-width: 320px) and (max-width: 991px) {
+          border: unset;
+          border-bottom: 1px solid #EBEBEB;
+          padding: 0 0 20px;
+        }
       }
       .fc {
         &__image {
           img {
             width: 120px;
             height: 120px;
+            border-radius: 10px;
           }
         }
         &__name {
@@ -56,6 +66,11 @@ export default {
           grid-column: 2;
           justify-self: end;
           cursor: pointer;
+          @media screen and (min-width: 320px) and (max-width: 991px) {
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+          }
           &:before, &:after {
             content: "";
             position: absolute;

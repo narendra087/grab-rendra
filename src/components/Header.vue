@@ -20,6 +20,11 @@
             </div>
           </div>
         </div>
+        <div class="header__mobile">
+          <div class="header__search__mobile">
+            <div class="header__search__button">Type your location</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -46,11 +51,24 @@ export default {
     align-items: center;
     justify-content: space-between;
     background: #FFF;
+    
+    &__mobile {
+      display: none;
+      @media screen and (min-width: 320px) and (max-width: 991px) {
+        display: block;
+        margin: 0 -15px;
+        padding: 0 15px;
+        border-top: 1px solid #f0efef;
+      }
+    }
     &__sticky {
       position: sticky;
       top: 0;
       background: #FFF;
       z-index: 99;
+      @media screen and (min-width: 320px) and (max-width: 991px) {
+        top: -88px;
+      }
     }
     &__section {
       display: flex;
@@ -68,6 +86,13 @@ export default {
     &__search {
       margin: 0 50px;
       width: 100%;
+      @media screen and (min-width: 320px) and (max-width: 991px) {
+        display: none;
+      }
+      &__mobile {
+        position: sticky;
+        top: 0;
+      }
       &__button {
         height: 40px;
         max-width: 360px;
@@ -77,6 +102,12 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
+        @media screen and (min-width: 320px) and (max-width: 991px) {
+          max-width: unset;
+          width: 100%;
+          border: unset;
+          height: 60px;
+        }
       }
     }
     &__cart {

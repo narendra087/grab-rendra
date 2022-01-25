@@ -131,6 +131,9 @@ export default {
       top: 88px;
       background: #FFF;
       z-index: 99;
+      @media screen and (min-width: 320px) and (max-width: 991px) {
+        top: 60px;
+      }
     }
     .lf__navigation {
       display: flex;
@@ -163,6 +166,11 @@ export default {
     .lf__content {
       background: #f7f7f7;
       padding: 70px 0;
+      @media screen and (min-width: 320px) and (max-width: 991px) {
+        background: #FFF;
+        padding: 40px 0;
+        border-top: 1px solid #C5C5C5;
+      }
       &__wrapper {
         display: grid;
         gap: 50px;
@@ -172,11 +180,17 @@ export default {
         font-size: 36px;
         font-weight: 700;
         margin-bottom: 30px;
+        @media screen and (min-width: 320px) and (max-width: 991px) {
+          font-size: 20px;
+        }
       }
       &__card {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         gap: 20px;
+        @media screen and (min-width: 320px) and (max-width: 991px) {
+          grid-template-columns: unset;
+        }
       }
     }
   }
