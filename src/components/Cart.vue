@@ -49,6 +49,9 @@ export default {
       @media screen and (min-width: 320px) and (max-width: 991px) {
         width: 60%;
       }
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        width: 100%;
+      }
     }
     &__close {
       position: absolute;
