@@ -12,7 +12,7 @@
             </div>
           </div>
           <div class="header__section header__section__right">
-            <div class="header__cart">
+            <div @click="toggleCart()" class="header__cart">
               <img src="@/assets/images/cart.png" alt="cart">
             </div>
             <div class="header__user">
@@ -25,12 +25,18 @@
   </div>
 </template>
 <script>
+import { mapActions } from "vuex";
 export default {
   data() {
     return {
       formFocus: false,
     }
-  }
+  },
+  methods: {
+    ...mapActions({
+      toggleCart: 'toggleCart',
+    }),
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -75,6 +81,7 @@ export default {
     }
     &__cart {
       margin-right: 20px;
+      cursor: pointer;
       img {
         width: 40px;
         height: 40px;
